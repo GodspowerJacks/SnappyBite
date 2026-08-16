@@ -1,5 +1,5 @@
  const track = document.getElementById('track');
- const slides = track.children;
+ const slides = track;
  const dotsContainer = document.getElementById('dots');
  let current = 0;
  let autoSlide;
@@ -41,4 +41,41 @@
 
  const banner = document.querySelector('.banner');
  banner.addEventListener('mouseenter', stopAuto);
- banner.addEventListener('mouseleave', startAuto);
+ banner.addEventListener('mouseleave', startAuto); // ---- Count-up animation for stats ----
+ function animateCount(el, target, duration = 1600) {
+     const start = performance.now();
+     const startVal = 0;
+
+     function tick(now) {
+         const elapsed = now - start;
+         const progress = Math.min(elapsed / duration, 1);
+         // ease-out for a nice deceleration
+         const eased = 1 - Math.pow(1 - progress, 3);
+         const current = Math.floor(startVal + (target - startVal) * eased);
+         el.textContent = current.toLocaleString() + '+';
+
+         if (progress < 1) {
+             requestAnimationFrame(tick);
+         } else {
+             el.textContent = target.toLocaleString() + '+';
+         }
+     }
+     requestAnimationFrame(tick);
+ }
+
+ const statEls = document.querySelectorAll('.stat-card .num');
+ let counted = false;
+
+ function triggerCountIfVisible() {
+     if (counted) return;
+     const statsSection = document.querySelector('.stats');
+     const rect = statsSection.getBoundingClientRect();
+     if (rect.top < window.innerHeight * 0.85) {
+         counted = true;
+         statEls.forEach(el => animateCount(el, parseInt(el.dataset.target, 10)));
+         window.removeEventListener('scroll', triggerCountIfVisible);
+     }
+ }
+
+ window.addEventListener('scroll', triggerCountIfVisible);
+ window.addEventListener('load', triggerCountIfVisible);
