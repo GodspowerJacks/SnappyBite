@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snappybite.com - Checkout</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="d-flex">
+        <nav class="d-flex">
+            <div class="first">
+                <div class="logo">
+                    <img src="../img/snappybite_logo.png" alt="Brand Logo" width="30">
+                    <h3>SnappyBite</h3>
+                </div>
+                <div class="country">
+                    <img src="../img/ngr.png" alt="Nigeria flag" width="30">
+                    <h3>NGR</h3>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="vendor.html">vendor</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="track-order.html">Track</a>
+                </li>
+            </ul>
+
+            <div class="second">
+                <div class="more dropdown">
+                    <a href="#">More &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Log In</a>
+                        </li>
+                        <li>
+                            <a href="dashboard-user.html">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a href="signup.html">Get Started</a>
+                </div>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+        </nav>
+    </header>
+    <main>
+        <section class="checkout-section">
+            <h1>Checkout</h1>
+
+            <div class="checkout-layout">
+                <div>
+                    <div class="checkout-block">
+                        <h3>Delivery Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkoutName">Full Name</label>
+                                <input type="text" id="checkoutName" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutPhone">Phone Number</label>
+                                <input type="tel" id="checkoutPhone" placeholder="080X XXX XXXX" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutAddress">Delivery Address</label>
+                            <input type="text" id="checkoutAddress" placeholder="Street address, area, city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutNote">Delivery Note (optional)</label>
+                            <textarea id="checkoutNote" rows="3" placeholder="E.g. Gate code, landmark, drop-off instructions"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="checkout-block">
+                        <h3>Payment Method</h3>
+                        <div class="pay-options">
+                            <label class="pay-option">
+                                <input type="radio" name="payment" checked>
+                                <div class="pay-icon">💳</div>
+                                <div>
+                                    <div class="pay-name">Pay with Card</div>
+                                    <div class="pay-desc">Secured payment via Paystack / Flutterwave</div>
+                                </div>
+                            </label>
+                            <label class="pay-option">
+                                <input type="radio" name="payment">
+                                <div class="pay-icon">🏦</div>
+                                <div>
+                                    <div class="pay-name">Bank Transfer</div>
+                                    <div class="pay-desc">Pay directly from your bank app</div>
+                                </div>
+                            </label>
+                            <label class="pay-option">
+                                <input type="radio" name="payment">
+                                <div class="pay-icon">💵</div>
+                                <div>
+                                    <div class="pay-name">Cash on Delivery</div>
+                                    <div class="pay-desc">Pay the rider when your order arrives</div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="order-note">You will not be charged until your order is confirmed by the vendor.</p>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutSummary"></div>
+                    <button type="button" id="placeOrderBtn" class="btn-full" style="margin-top:18px;">Place Order</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <section class="footer-about">
+                <h2>SnappyBite</h2>
+                <p>Delicious meals, simplified. We empower you with affordable tools to cook at home or order locally, so you can enjoy great food anytime.</p>
+            </section>
+
+            <section class="footer-links">
+                <h4>Company</h4>
+                <a href="vendor.html">Vendors</a>
+                <a href="dashboard-admin.html">Riders</a>
+                <a href="menu.html">Store</a>
+                <a href="about.html">About</a>
+            </section>
+
+            <section class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="faq.html">Help Center</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="faq.html">Policy</a>
+            </section>
+
+            <section class="footer-subscribe">
+                <h4>Subscribe</h4>
+                <p>Get the latest updates, recipes, and special offers.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" aria-label="Email address">
+                    <button type="submit" class="btn-sub btn--light">Subscribe</button>
+                </form>
+            </section>
+        </div>
+
+        <hr>
+
+        <div class="site-footer__bottom">
+            <div class="socials">
+                <a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.87.24-1.46 1.49-1.46H16.5V4.35C16.2 4.31 15.2 4.22 14 4.22c-2.4 0-4 1.46-4 4.15V10.5H7.5v3H10V21h3.5z"/></svg></a>
+                <a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm0 5.6a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4zm4.3-7.8a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zM12 4.6c2.4 0 2.7 0 3.6.05.9.04 1.5.18 1.9.34.5.19.85.42 1.22.79.37.37.6.72.79 1.22.16.4.3 1 .34 1.9.05.9.05 1.2.05 3.6s0 2.7-.05 3.6c-.04.9-.18 1.5-.34 1.9-.19.5-.42.85-.79 1.22-.37.37-.72.6-1.22.79-.4.16-1 .3-1.9.34-.9.05-1.2.05-3.6.05s-2.7 0-3.6-.05c-.9-.04-1.5-.18-1.9-.34a3.3 3.3 0 0 1-1.22-.79 3.3 3.3 0 0 1-.79-1.22c-.16-.4-.3-1-.34-1.9-.05-.9-.05-1.2-.05-3.6s0-2.7.05-3.6c.04-.9.18-1.5.34-1.9.19-.5.42-.85.79-1.22.37-.37.72-.6 1.22-.79.4-.16 1-.3 1.9-.34.9-.05 1.2-.05 3.6-.05zM12 3c-2.44 0-2.75.01-3.71.06-.96.05-1.62.2-2.19.42-.6.23-1.1.54-1.6 1.04-.5.5-.81 1-.04 1.6-.22.57-.37 1.23-.42 2.19C4 8.75 4 9.06 4 11.5v1c0 2.44.01 2.75.06 3.71.05.96.2 1.62.42 2.19.23.6.54 1.1 1.04 1.6.5.5 1 .81 1.6 1.04.57.22 1.23.37 2.19.42.96.05 1.27.06 3.71.06h1c2.44 0 2.75-.01 3.71-.06.96-.05 1.62-.2 2.19-.42.6-.23 1.1-.54 1.6-1.04.5-.5.81-1 1.04-1.6.22-.57.37-1.23.42-2.19.05-.96.06-1.27.06-3.71v-1c0-2.44-.01-2.75-.06-3.71-.05-.96-.2-1.62-.42-2.19a4.8 4.8 0 0 0-1.04-1.6 4.8 4.8 0 0 0-1.6-1.04c-.57-.22-1.23-.37-2.19-.42C14.75 3.01 14.44 3 12 3z"/></svg></a>
+                <a href="#twitter" aria-label="Twitter / X"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 3H21.6l-6.05 6.9L22.7 21h-5.6l-4.4-5.75L7.6 21H4.9l6.47-7.38L4 3h5.75l3.98 5.26L18.9 3zm-1 16.2h1.5L8.2 4.7H6.6l11.3 14.5z"/></svg></a>
+                <a href="#tiktok" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.8 3h-2.9v12.1a2.6 2.6 0 1 1-1.9-2.5V9.5a5.5 5.5 0 1 0 4.7 5.44V9.1a7.4 7.4 0 0 0 4.3 1.38V7.6a4.6 4.6 0 0 1-4.2-4.6z"/></svg></a>
+            </div>
+            <p>© 2026 SnappyBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
